@@ -5,7 +5,7 @@ ear=gets.to_i
 oll_nall=0
 
 
-ear.times do |er|
+1.upto(ear) do |er|
 	1.upto(12) do |mm|
 		oll_nall=oll_nall+summ
 		puts "рік #{er} місяць #{mm} накопичено #{oll_nall}"
