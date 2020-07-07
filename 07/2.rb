@@ -1,5 +1,5 @@
 puts "Чи довольні ви своєю зарплатою Введіть (Y/N)"
-answer=gets.chomp.downcase
+answer=gets.chomp.downcase.strip
 
 if answer=="y"
 
