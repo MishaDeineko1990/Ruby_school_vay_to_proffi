@@ -5,7 +5,9 @@ puts "Чи хочеье ви зіграти? (Y/N)"
 start_gases = gets.chomp.downcase.strip
 
 if ear>17 && start_gases=="y"
-    puts "гра починається"
+    puts "Введить ентер щоб почати"
+
+    
     
 else
     puts "До побачення"
