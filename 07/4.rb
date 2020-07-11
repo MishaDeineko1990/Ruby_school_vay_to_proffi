@@ -13,14 +13,21 @@ money = 100
 1000.times do
         puts "Введить ентер щоб почати"
         gets
+        if money < 1
+            puts "До побачення в вас не має грошей"
+            exit
+            
+        end
 
-        a = rand(0..5)
-        b = rand(0..5)
-        c = rand(0..5)
+        money=money-1
+        a = rand(0..9)
+        b = rand(0..9)
+        c = rand(0..9)
+        puts "Випало #{a}#{b}#{c}"
         
     if a == 0 && b == 0 && c == 0
 
-        puts "ooh"
+        puts "ooh fack"
 
         money = 0
     end
@@ -59,6 +66,39 @@ money = 100
 
         money = money + 50
     end
+
+
+    if a == 6 && b == 6 && c == 6
+
+        puts "yeas bomb 666"
+
+        money = money + 60
+    end
+
+
+    if a == 7 && b == 7 && c == 7
+
+        puts "oho ho 777"
+
+        money = money + 70
+    end
+
+
+    if a == 8 && b == 8 && c == 8
+
+        puts "supper 888"
+
+        money = money + 80
+    end
+
+
+    if a == 9 && b == 9 && c == 9
+
+        puts "mega 999"
+
+        money = money + 90
+    end
+
 
     puts "На вашому рахунку #{money}"
     puts
