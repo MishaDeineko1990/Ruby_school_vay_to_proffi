@@ -150,8 +150,7 @@ money = 100
 
     puts "На вашому рахунку #{money}"
     puts
-    puts
-
+ 
 end
 
 else
