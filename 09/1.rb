@@ -7,5 +7,5 @@ def print_all_students
         puts student
     end
 end    
-
+                    
 print_all_students
