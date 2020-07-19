@@ -1,26 +1,7 @@
 def get_comand
-    x = rand(1..4)
-
-    cmd = ""
-
-    if x == 1 
-        cmd=:left
-    end
-
-    if x == 2 
-        cmd=:up
-    end
-
-    if x == 3 
-        cmd=:right
-    end
-    
-
-    if x == 4 
-        cmd=:down
-    end
-
-    cmd
+    x = rand(4)
+    actions =  %w[:left :right :up :down]
+    cmd = actions[x]
 end
 
 
