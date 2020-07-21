@@ -17,8 +17,9 @@ loop do
         exit
 
     else
-
-        arr.push add_name
+        puts "How old #{add_name}"
+        age = gets.to_i
+        arr.push [add_name, age]
         puts "you add items in arrrey: (\"#{arr.last}\")"
         puts
 
