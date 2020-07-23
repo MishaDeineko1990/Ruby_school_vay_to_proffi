@@ -16,4 +16,3 @@ puts "#{a} - #{b}"
 arr = [1, 2, 3] 
 
 arr = arr.permutation(2).to_a
-arr
