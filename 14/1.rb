@@ -1,13 +1,15 @@
 
 class Animal
-    def stop
-        
-        puts "#{@name} is stop"
+    def initialize 
+        @name = "dog"
+    end
+
+    def stop name
+        puts "#{name} is stop"
     end
 
 
-    def run
-        @name = "dog"
+    def run        
         puts "#{@name} is run"
     end
 end
@@ -15,6 +17,9 @@ end
 a = Animal.new
 
 
+
 a.stop
 a.run
 a.stop
+
+a.stop "cat"
