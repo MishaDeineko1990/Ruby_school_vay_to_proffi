@@ -2,20 +2,20 @@ class Airoport
     attr_reader :name
     attr_reader :planes
 
-    def initialize(name)
-        @name - name
+    def initialize (name)
+        @name = name
         @planes = []
     end
 
-    def add_plane planes
-        @plane << plane
+    def add_plane plane
+        @planes << plane
     end
 end
 
-class plane
+class Plane
     attr_reader :model
 
-    def initialize(model)
+    def initialize (model)
         @model = model
     end
 end
@@ -67,4 +67,4 @@ airports << airport1
 airports << airport2
 
 
-puts airport
+puts airports[1]
