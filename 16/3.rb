@@ -1,4 +1,4 @@
-class Amsimal
+class Animal
     def initialize name
 
         @name = name
@@ -25,6 +25,24 @@ class Amsimal
 
 end
 
-animal1 = Amsimal.new "cat"
+animal1 = Animal.new "cat"
 
-animal1.jump
+
+
+class Dog < Animal
+    def initialize name 
+        @name = name
+    end
+
+    def brak 
+        puts "#{@name} Woof Woof"
+        eat
+        sleep
+    end
+end
+
+# animal1.jump
+
+animal2 = Dog.new "Tinga"
+
+animal2.brak
