@@ -16,14 +16,14 @@
 
 arr = %w[roman miki 32 ror git oll]
 
-puts "arr[1...-1]"
+puts "1 arr[1...-1]"
 puts arr[1...-1]
 
 puts
 puts "==============="
 puts
 
-puts "arr[1..-2]"
+puts "2 arr[1..-2]"
 puts arr[1..-2]
 
 
@@ -31,12 +31,12 @@ puts
 puts "==============="
 puts
 
-puts "arr[1...-1][0]"
+puts "3 arr[1...-1][0]"
 puts arr[1...-1][0]
 
 puts
 puts "==============="
 puts
 
-puts "arr[1...-1][0][1...-1]"
+puts "4 arr[1...-1][0][1...-1]"
 puts arr[1...-1][0][1...-1]

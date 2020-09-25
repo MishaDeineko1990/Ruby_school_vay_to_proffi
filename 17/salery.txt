@@ -1,0 +1,4 @@
+june, 10
+november, 20
+desember, 30
+may, 100
