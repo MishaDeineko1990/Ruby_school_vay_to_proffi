@@ -67,4 +67,11 @@ airports << airport1
 airports << airport2
 
 
-puts airports[1]
+airports.each do |airport|
+    puts "Name airport #{airport.name}"
+
+    airport.planes.each do |plane|
+       puts "Name plans #{plane.model}"
+    end
+ 
+end
