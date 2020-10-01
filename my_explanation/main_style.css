@@ -1,0 +1,28 @@
+.conteiner
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner > div
+{
+    width: 90%;
+    margin: 10px, auto;
+}
+
+.conteiner > div:nth-child(2)
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.conteiner > div:nth-child(2) div
+{
+    border: slategray, 1px;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+}
