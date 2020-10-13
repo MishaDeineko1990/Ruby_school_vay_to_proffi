@@ -7,6 +7,9 @@ words = {
 
 result = 0
 
-words.each_value { |value| result += value.size }
+words.each_value do |value|
+      result += value.size 
+      p "value #{value.size}"
+end
 
-puts "All words: #{result}"
+puts "All words: #{result}"с
