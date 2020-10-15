@@ -12,4 +12,4 @@ words.each_value do |value|
       p "value #{value.size}"
 end
 
-puts "All words: #{result}"с
+puts "All words: #{result}"

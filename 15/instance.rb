@@ -12,10 +12,13 @@ end
 
 class Cat < Animal
 
-
+    def initialize name
+       super name*2
+    end
 
 end 
 
-c1 = Cat.new "Joninyo"
+c1 = Cat.new "Chiko"
+
 
 c1.introduce
