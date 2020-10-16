@@ -34,3 +34,6 @@ spart = " spart chempiion "
     puts "#{i} - #{spart*i}"
 
 end
+
+
+5.upto
