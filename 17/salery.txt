@@ -1,4 +1,5 @@
-june, 10
-november, 20
-desember, 30
-may, 100
+june 1000
+august 10000
+september 20000
+octomber 30000
+nowemder 50000
