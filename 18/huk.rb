@@ -8,4 +8,4 @@ def is_wrong_password? pasw
     p response
 end
 
-p is_wrong_password? "love"
+p is_wrong_password? "123456"
