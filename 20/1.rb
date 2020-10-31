@@ -20,6 +20,27 @@ get '/teem2' do
     erb :message
 end
 
+get '/under_constration' do
+        
+end
+
+
+
+
+
+def under_constration var1, var2
+    @title = var1
+    @message = var2
+    erb :under_constration
+end
+
+class One_1000_pages
+    attr_reader
+    def initialize model
+        
+    end
+end
+
 post '/' do
     @login = params[:login]
     @password = params[:password]
