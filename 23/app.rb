@@ -19,6 +19,21 @@ get '/contacts' do
 	erb :contacts
   end
 
+get '/admin' do
+	erb :admin
+end
+
+post '/admin' do
+    @login = params[:login]
+    @password = params[:password]
+
+    if @login == 'misha' && @password == 'qwerty'
+        erb :list
+    else 
+        erb "error validation"
+    end
+end
+
 post '/visit' do
 	@name = params[:name]
 	@phone = params[:phone]
