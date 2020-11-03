@@ -28,34 +28,18 @@ post '/visit' do
   end
 
 	hh = {
-		:username => [
-			"Enter You name", [
-				[
-					@x,"email write dont true"
-				],
-				[
-					@x,"email write dont true"
-				]
-			]
-		],
-		:phone => ["Enter phone", 1],
-		:datetime => ["Enter date and time", 1]
+		:username => "Enter You name",
+		:phone => "Enter phone",
+		:datetime => "Enter date and time"
 	}
 
 	hh.each do |kay, value|
 		if params[kay]==""
 			@error = value[0]
 			return erb :visit
-		else
+		
 
-			@error = value[1][0][0]
-			return erb :visit
-			# value[1].each do |vv|
-			# 	if vv[0](params[kay])==false
-			# 		@error = vv[1]
-			# 		return erb :visit
-			# 	end
-			# end
+			
 		end
 	end
 end
