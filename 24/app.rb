@@ -16,6 +16,7 @@ get '/visit' do
 end
 
 post '/visit' do
+	
 
 	@username = params[:username]
 	@phone = params[:phone]
@@ -25,7 +26,7 @@ post '/visit' do
 
 	@x = def is_a_valid_email?(email)
 	(email =~ /^(([A-Za-z0-9]*\.+*_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\+)|([A-Za-z0-9]+\+))*[A-Z‌​a-z0-9]+@{1}((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,4}$/i)
-  end
+	end
 
 	hh = {
 		:username => "Enter You name",
@@ -39,6 +40,12 @@ post '/visit' do
 		return erb :visit
 	end
 
+
+
+
 	erb "Ok, username is #{@username}, #{@phone}, #{@datetime}, #{@barber}, #{@color}"
 
 end
+
+# https://stackoverflow.com/questions/33557817/how-to-send-mail-with-sinatra-using-pony
+
