@@ -32,6 +32,16 @@ get '/visit' do
 	erb :visit
 end
 
+get  '/show_users' do
+
+	db = get_db
+	db.results_as_hash = true
+	@ressaults = db.execute 'select * from Clients order by id desc'
+		
+	erb :show_users
+	# erb "#{@ressaults}"
+end	
+
 post '/visit' do
 	
 
@@ -106,14 +116,6 @@ post '/visit' do
 
 end
 
-get  '/show_users' do
 
-	@ressaults
-	db = get_db
-	db.results_as_hash = true
-	@ressaults = db.execute 'select * from Clients order by id desc'
-		
-	erb "#{@ressaults}"
-end	
 # https://stackoverflow.com/questions/33557817/how-to-send-mail-with-sinatra-using-pony
 
