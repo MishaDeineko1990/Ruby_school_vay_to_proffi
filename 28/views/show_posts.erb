@@ -1,0 +1,13 @@
+<h1>Liprozorium</h1>
+
+<% @res.each do |t| %>
+    <br/>
+    <h3><%= t["created_date"] %></h3>
+    <p class="lead">
+        <%= t["content"] %>
+    </p>
+    <a href="/details/<%=t['id']%>">Details</a>
+    <hr>
+    <br/>
+<% end %>
+
