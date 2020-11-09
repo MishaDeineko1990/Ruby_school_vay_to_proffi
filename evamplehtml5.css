@@ -1,0 +1,9 @@
+body{
+    overflow:hidden; /* This will remove the default scroll, not really needed, safer nonetheless */
+  }
+  .right, .left{
+    overflow:auto; /* This will add a scroll when required */
+    width:50%;
+    float:left;
+    height: 100%
+  }
