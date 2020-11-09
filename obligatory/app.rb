@@ -40,6 +40,7 @@ configure do
         "created_date" date,
         "author" text,
         "rubric" text,
+        "rubric_id" integer,
         "image" text,
         "title" text,
         "content" text,
@@ -65,22 +66,22 @@ configure do
 
     seed_rubrics @db, [
         [
-            'Нерухомість',
+            'Real estate',
             'тут ви можете продати чи кіпити нерухомість п всій Україні',
             'https://sn.sumy.ua/wp-content/uploads/2020/10/olx_logo.png'    
         ],
         [
-            'Бізнес та послуги',
+            'Business and services',
             'Найбільший каталог для замовлення та продажі послуг',
             'https://sn.sumy.ua/wp-content/uploads/2020/10/olx_logo.png'    
         ],
         [
-            'Дім сад',
+            'House and garden',
             'Все для дому тут',
             'https://sn.sumy.ua/wp-content/uploads/2020/10/olx_logo.png'    
         ]
     ]
-
+    
 end
 
 
@@ -103,7 +104,18 @@ get '/new_obligatory' do
 end
 
 
+get '/rubric/:rubric' do
+	# rubric = params[:rubric]
+	
 
+	# @resault_rubric = @db.execute 'select * from Obligat where rubric_id = ?', [rubric]
+
+    # erb @resault_rubric
+
+end
+
+
+# select id from Rubric where name Нерухомість
 
 
 
@@ -118,7 +130,10 @@ post '/new_obligatory' do
 	@price = params[:price]
 	@image= params[:image]
     @rubric= params[:rubric]
+    # @rubric= "Real estateь"
     @author= "misha"
+    @rubr_id = @db.execute 'select id from Rubric where name = ?', [@rubric]
+    # @rubr_id = 4
 
 	# хеш
 	hh = { 	:title => 'Введите заголовок',
@@ -132,6 +147,9 @@ post '/new_obligatory' do
 		return erb :visit
 	end
 
+
+    #  ==========не работаєт insert into  Obligat через две переменых  rubric,  rubric_id,
+#    db.execute 'insert into Obligat(created_date, author, rubric, rubric_id, image, title, content, price) values (datetime(), ?, ?, ?, ?, ?, ?, ?)', [@author ,@rubric, @rubr_id, @image, @title, @content, @price]
 	
 	@db.execute 'insert into
 		Obligat
@@ -139,15 +157,19 @@ post '/new_obligatory' do
             created_date,
             author,
             rubric,
+            rubric_id,
             image,
             title,
             content,
             price
             
 		)
-		values (datetime(), ?, ?, ?, ?, ?, ?)', [@author ,@rubric, @image, @title, @comtent, @price]
+		values (datetime(),?, ?, ?, ?, ?, ?, ?)', [@author ,@rubric, @rubr_id, @image, @title, @content, @price]
 
-	erb "<h2>Спасибо, вы записались!</h2>"
+	erb "<h2>Спасибо, вы записались!#{@rubric}</h2>"
 
-    erb :new_obligatory
 end
+
+
+# select * from Obligat	
+# @db.execute 'insert into Obligat(created_date, author, rubric, rubric_id, image, title, content, price) values (datetime(), "one", "two", "thre", "fore", "five", "six", "seven")', [@author ,@rubric, @rubr_id, @image, @title, @content, @price]
