@@ -13,3 +13,6 @@ end
 get "/" do
     erb "dddd"
 end
+
+
+# rake db:create_migration create_clients
