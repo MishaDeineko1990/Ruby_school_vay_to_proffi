@@ -16,3 +16,4 @@ end
 
 
 # rake db:create_migration create_clients
+# rake db:migrate

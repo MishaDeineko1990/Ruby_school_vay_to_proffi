@@ -63,10 +63,11 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   activerecord
-  rake (>= 0.9.2)
+  rake
   sinatra
   sinatra-activerecord
   sinatra-contrib
