@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>step one => add to app.rb set :database, "name_data_base.db"</p>
+    <p>step two => add to aplicathion class NameModel > ActiveRecord::Base</p>
+    <p>step thre => $ rake db:create_migration create_clients (in folder app whea is Rakefile)</p>
+    <p>step fore add to migration create table =>   <br>
+        create_table :tabenameS do |t| <br>
+            t.text :name <br>
+            <br>
+            t.timestamps<br>
+        end<br>
+    </p>
+    <p>step fore dot half =>  create RakeFile</p>
+    <p>step five  => $ rake db:migration</p>
+
+</body>
+</html>
