@@ -1,0 +1,2 @@
+1. rails new blog
+2. rails g cintroller home index     // create controller
