@@ -1,21 +1,21 @@
-aa = File.open "text.txt", "r"
 
-@hh = {}
+@a2 = File.open "text.txt", "r"
 
-@arr = []
+@hesh ={}
+@arrey = []
 
-aa.each_line do |line|
-
-    @arr = @arr + line.split(/\s|\n|,/)
-
-        
-
+@a2.each_line do |lin|
+    @arrey = @arrey+lin.split(/\n|\s|,/)
 end
 
-@arr.each do |ar|
-    cnt = @hh[ar].to_i
+@arrey.each do |es|
+    cnt = @hesh[es].to_i
     cnt = cnt+1
-    @hh[ar]= cnt
+    @hesh[es] = cnt
 end
 
-p @hh
+@hesh.each do |kay, value|
+    print "#{kay} -- #{value}\n" 
+    
+end
+@a2.close
