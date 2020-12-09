@@ -1,3 +1,24 @@
 1. rails new blog
-2. rails g cintroller home index     // create controller
-3.
+2. rails g model Article title:string text:text
+3. rake db:migrate
+4. rails g controller articles new     // create controller
+5. add code in router.rb
+    resources :articles
+6. add in view presintation form builder    
+    <%= form_for :article, url: "/articles" do |f|%>    
+        <p>   
+            <%= f.label :title%></br>
+            <%= f.text_field :title%>
+        </p>
+        <p>   
+            <%= f.label :text %></br>
+            <%= f.text_area :text%>
+        </p>
+        <p>
+            <%= f.submit%>
+        </p>
+    <%end%>
+7. add to articles_controller method create
+    def create
+        render plain: params[:article].inspect
+    end

@@ -1,0 +1,15 @@
+1. rake g controller contacts
+2. add method in controller 
+    def new
+
+    end
+
+    def create
+
+    end
+3. add marshruts to routs.rb
+    resource :contacts, only: [:new, :create]
+  
+4. create vue file new.html.erb
+
+5. 
