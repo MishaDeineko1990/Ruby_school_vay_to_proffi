@@ -52,9 +52,29 @@
 
 
 10 add variable  to method create in controller 
-    @contact = Contact.new(contact_params)
+    
+        @contact = Contact.new(contact_params)   # vatible from params
+        @contact.save #save in db
 
 
-rails console    -start console
+11. add validation (add to modeles/contact.rb)
+
+    validates :email, presence: true
+    validates :message, presence: true
+
+12. change method create in conteoller contacts add validates phorm
+    if @contact.valid?
+        @contact.save
+    else
+        render action "new"
+    end
+
+
+
+
+
+
+
+    rails console    -------start console
     Contact.all
     Contact.attribute_names
