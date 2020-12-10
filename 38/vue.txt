@@ -12,4 +12,44 @@
   
 4. create vue file new.html.erb
 
-5. 
+5. create model
+    rails g model Contact email:string masege:text
+
+6. create migration
+    rake db:migrate
+
+7. add phorm builder in vue file
+    <%= form_for :contact, url: "/contacts" do |f|%>    
+        <p>   
+            <%= f.label :email%></br>
+            <%= f.text_field :email%>
+        </p>
+        <p>   
+            <%= f.label :masege %></br>
+            <%= f.text_area :masege%>
+        </p>
+        <p>
+            <%= f.submit%>
+        </p>
+    <%end%>
+
+8. add to controller vue varible from information from form_for
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rails console    -start console
+    Contact.all
+    Contact.attribute_names
