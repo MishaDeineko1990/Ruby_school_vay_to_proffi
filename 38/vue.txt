@@ -25,7 +25,7 @@
 
 
 7. add phorm builder in vue file
-    <%= form_for :contact, url: contacts_path do |f|%>    
+    <%= form_for :contact, :url contacts_path do |f|%>    
         <p>   
             <%= f.label :email%></br>
             <%= f.text_field :email%>
@@ -67,11 +67,31 @@
     if @contact.valid?
         @contact.save
     else
-        render action "new"
+        render action: 'new'
     end
 
+13. add css style for error validation form app/assets/.css
+
+    .field_with_errors input{
+    border-color: red;
+    }
+    .field_with_errors textarea{
+        border-color: red;
+    }
+    .field_with_errors textfield{
+        border-color: red;
+    }
+
+14. add debag for link /contacts 
+    1   variant     delete :new from lines resources :contacts, only: [:new, :create]
+                    add get 'contacts' => contacts#new
+    
+    2   variant     resources :contacts, only: [:new, :create], path_names: { :new => ''}
 
 
+15. add to vue text render from error
+
+    <p><%= @article.errors.full_messages %></p>
 
 
 
