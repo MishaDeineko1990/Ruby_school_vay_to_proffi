@@ -1,55 +1,105 @@
-1. rake g controller contacts
-2. add method in controller 
+
+
+1. rails g controller contacts
+
+2. create model
+    rails g model Contact email:string message:text
+
+3. create migration
+    rake db:migrate
+
+
+4. add method in controller 
     def new
 
     end
 
     def create
-
+        render plain: params[:contact].inspect
     end
-3. add marshruts to routs.rb
+5. add marshruts to routs.rb
     resource :contacts, only: [:new, :create]
   
-4. create vue file new.html.erb
+6. create vue file new.html.erb
 
-5. create model
-    rails g model Contact email:string masege:text
 
-6. create migration
-    rake db:migrate
 
 7. add phorm builder in vue file
-    <%= form_for :contact, url: "/contacts" do |f|%>    
+    <%= form_for :contact, :url contacts_path do |f|%>    
         <p>   
             <%= f.label :email%></br>
             <%= f.text_field :email%>
         </p>
         <p>   
-            <%= f.label :masege %></br>
-            <%= f.text_area :masege%>
+            <%= f.label :message %></br>
+            <%= f.text_area :message%>
         </p>
         <p>
-            <%= f.submit%>
+            <%= f.submit "GO"%>
         </p>
     <%end%>
 
 8. add to controller vue varible from information from form_for
+    @info_form = params[:contact]
+
+
+9. add variable  to method create in controller 
+    
+        @contact = Contact.new(contact_params)   # vatible from params
+        @contact.save #save in db
+
+10. add to controller dungere atribute parrams
+    
+    private
+
+
+    def contact_params
+        params.require(:contact).permit(:email, :message)
+    end  
+
+
+11. add validation (add to modeles/contact.rb)
+
+    validates :email, presence: true
+    validates :message, presence: true
+
+12. change method create in conteoller contacts add validates phorm
+    if @contact.valid?
+        @contact.save
+    else
+        render action: 'new'
+    end
+
+13. add css style for error validation form app/assets/.css
+
+    .field_with_errors input{
+    border-color: red;
+    }
+    .field_with_errors textarea{
+        border-color: red;
+    }
+    .field_with_errors textfield{
+        border-color: red;
+    }
+
+14. add debag for link /contacts 
+    1   variant     delete :new from lines resources :contacts, only: [:new, :create]
+                    add get 'contacts' => contacts#new
+    
+    2   variant     resources :contacts, only: [:new, :create], path_names: { :new => ''}
+
+
+15. add to vue text render from error
+
+    <p><%= @article.errors.full_messages %></p>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-rails console    -start console
+    rails console    -------start console
     Contact.all
     Contact.attribute_names
+
+
+
