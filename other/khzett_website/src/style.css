@@ -1,0 +1,5 @@
+.jumbotron {
+    background-image: url("img/wheat-5681617_960_720.jpg");
+    /* https://pixabay.com/photos/wheat-field-crops-wheat-field-5681617/ */
+    background-size: cover;
+}
