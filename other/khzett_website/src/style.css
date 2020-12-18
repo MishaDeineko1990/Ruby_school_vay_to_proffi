@@ -1,3 +1,11 @@
+#main_logo {
+    background-color: #D1AC00;
+}
+
+
+
+
+
 #top-banner {
     background-image: url("img/wheat-5681617_960_720.jpg");
     /* https://pixabay.com/photos/wheat-field-crops-wheat-field-5681617/ */
@@ -15,6 +23,13 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.photo_factory {
+    width: 100%;
+    height: 300px;
+    background-image: url("img/unit-factory.jpg");
+}
+
 
 
 
