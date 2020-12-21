@@ -87,7 +87,8 @@
     1   variant     delete :new from lines resources :contacts, only: [:new, :create]
                     add get 'contacts' => contacts#new
     
-    2   variant     resources :contacts, only: [:new, :create], path_names: { :new => ''}
+    2   variant     resource :contacts, only: [:new, :create], path_names: { :new => ''}
+                    
 
 
 15. add to vue text render from error
