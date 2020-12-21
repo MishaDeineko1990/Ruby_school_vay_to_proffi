@@ -107,21 +107,21 @@ $(".services .service").hover(
   
   
   
-  // $(".button").hover(
-  //   function(){
-  //   $(this).stop().animate({borderColor: "#dfdc1a", color: "#dfdc1a"})
-  //  },
-  //   function(){
-  //   $(this).stop().animate({borderColor: "#F4F1F3", color: "#3b363d"})  
-  // })
+  $(".button").hover(
+    function(){
+    $(this).stop().animate({borderColor: "#dfdc1a", color: "#dfdc1a"})
+   },
+    function(){
+    $(this).stop().animate({borderColor: "#F4F1F3", color: "#3b363d"})  
+  })
   
-  // $("header .button, button").hover(
-  //   function(){
-  //   $(this).stop().animate({borderColor: "#dfdc1a", color: "#dfdc1a"})
-  //  },
-  //   function(){
-  //   $(this).stop().animate({borderColor: "#ffffff", color: "#ffffff"})  
-  // })
+  $("header .button, button").hover(
+    function(){
+    $(this).stop().animate({borderColor: "#dfdc1a", color: "#dfdc1a"})
+   },
+    function(){
+    $(this).stop().animate({borderColor: "#ffffff", color: "#ffffff"})  
+  })
   
   $(".map .open-map").click(
     function(){
