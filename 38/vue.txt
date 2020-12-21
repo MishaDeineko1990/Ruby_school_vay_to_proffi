@@ -93,7 +93,7 @@
 
 15. add to vue text render from error
 
-    <p><%= @article.errors.full_messages %></p>
+    <p><%= @contact.errors.full_messages %></p>
 
 
 
