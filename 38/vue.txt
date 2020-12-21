@@ -95,9 +95,17 @@
 
     <p><%= @contact.errors.full_messages %></p>
 
+15,1 add upgrate show errors "dont validate varible @contact for vue new" add if check vraper to massege errors vue 
 
-
-
+    <% if @contact && @contact.errors.any? %>
+         <p>
+            <ul>
+                <% @contact.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </p>
+    <% end %>
 
     rails console    -------start console
     Contact.all
