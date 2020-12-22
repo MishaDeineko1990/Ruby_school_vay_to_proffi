@@ -1,5 +1,5 @@
 1. rails g controller contacts new create
-2. rails g model Content email:string message:text
+2. rails g model Contact email:string message:text
 3. rake db:migrate
 4. resource :contacts, only: [:new, :create], path_names: { :new => ''}
 5. add methods to controller
