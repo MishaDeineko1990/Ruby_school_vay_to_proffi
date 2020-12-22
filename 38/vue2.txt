@@ -1,7 +1,8 @@
 1. rails g controller contacts new create
 2. rails g model Content email:string message:text
 3. rake db:migrate
-4. add methods to controller
+4. resource :contacts, only: [:new, :create], path_names: { :new => ''}
+5. add methods to controller
     def new
 
     end
@@ -22,7 +23,7 @@
         params.require(:contact).permit(:email, :message)
     end  
 
-5. add phorm builder in vue file
+6. add phorm builder in vue file
 
     <% if @contact && @contact.errors.any? %>
          <p>
@@ -48,12 +49,12 @@
         </p>
     <%end%>
 
-6. add validation 
+7. add validation 
 
     validates :email, presence: true
     validates :message, presence: true
 
-7. add style for validation
+8. add style for validation
 
     .field_with_errors input
     {
