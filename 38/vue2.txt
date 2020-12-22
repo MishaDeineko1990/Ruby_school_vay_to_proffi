@@ -1,0 +1,74 @@
+1. rails g controller contacts new create
+2. rails g model Content email:string message:text
+3. rake db:migrate
+4. add methods to controller
+    def new
+
+    end
+
+    def create
+        @contact = Contact.new(contact_params)
+        
+        if @contact.valid?
+            @contact.save
+        else
+            render action: 'new'
+        end
+    end
+
+    private
+
+    def contact_params
+        params.require(:contact).permit(:email, :message)
+    end  
+
+5. add phorm builder in vue file
+
+    <% if @contact && @contact.errors.any? %>
+         <p>
+            <ul>
+                <% @contact.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </p>
+    <% end %>
+
+    <%= form_for :contact, url: contacts_path do |f| %>
+        <p>   
+            <%= f.label :email%></br>
+            <%= f.text_field :email%>
+        </p>
+        <p>   
+            <%= f.label :message %></br>
+            <%= f.text_area :message%>
+        </p>
+        <p>
+            <%= f.submit "GO"%>
+        </p>
+    <%end%>
+
+6. add validation 
+
+    validates :email, presence: true
+    validates :message, presence: true
+
+7. add style for validation
+
+    .field_with_errors input
+    {
+        border-color: red;
+    }
+    .field_with_errors textarea
+    {
+        border-color: red;
+    }
+    .field_with_errors textfield
+    {
+        border-color: red;
+    }
+
+---------------------------------------
+rails console    -------start console
+Contact.all
+Contact.attribute_names
