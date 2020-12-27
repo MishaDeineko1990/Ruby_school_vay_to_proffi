@@ -1,0 +1,26 @@
+1.  def new
+    end
+
+    def create
+        @article = Article.new(article_params)
+        
+        if @article.valid?
+            @article.save
+        else
+            render action: 'new'
+        end
+    end
+
+    private
+
+    def article_params
+        params.require(:article).permit(:title, :text)
+    end  
+
+2.  add module aticle validation
+        validates :title, presence: true
+        validates :text, presence: true
+
+3.  add to create vue linc from path show article_params
+    <%= link_to 'Show all aticles', articles_path%>
+
