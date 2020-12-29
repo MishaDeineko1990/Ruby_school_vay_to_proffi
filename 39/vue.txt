@@ -6,6 +6,7 @@
         
         if @article.valid?
             @article.save
+            redirect_to @artickle
         else
             render action: 'new'
         end
@@ -23,4 +24,21 @@
 
 3.  add to create vue linc from path show article_params
     <%= link_to 'Show all aticles', articles_path%>
+
+
+4. delete vue create
+
+5. Add method show to controller articles
+
+	def show
+	    @article = Article.find(params[:id])
+	end
+
+6. add vue show.html.erb
+	<h1><%= @article.title %></h1>
+
+	<p>
+	    <%= @article.text %>
+	</p> 
+	
 
