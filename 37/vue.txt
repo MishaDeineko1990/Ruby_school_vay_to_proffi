@@ -5,7 +5,7 @@
 5. add code in router.rb
     resources :articles
 6. add in view presintation form builder    
-    <%= form_for :article, url: "/articles" do |f|%>    
+    <%= form_for :article, url: articles_path do |f|%>    
         <p>   
             <%= f.label :title%></br>
             <%= f.text_field :title%>
