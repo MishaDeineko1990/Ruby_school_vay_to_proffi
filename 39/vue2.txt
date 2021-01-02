@@ -45,21 +45,23 @@
 
 6.4 edit view
     
-    <H1>List articles</H1>
+<%= form_for :article, url: article_path(@article), method: :put do |f|%>    
+    <p>   
+        <%= f.label :title%></br>
+        <%= f.text_field :title%>
+    </p>
+    <p>   
+        <%= f.label :text %></br>
+        <%= f.text_area :text%>
+    </p>
+    <p>
+        <%= f.submit%>
+    </p>
 
-    <% @articles.each do |article|%>
-        <br>
-        <h3> <%= article.title %></h3>
-        <p> <%= article.text %></p>
-        <p>
-            <%= link_to "Show", article_path(article)%> | 
-            <%= link_to "Edit", edit_article_path(article)%>
-        </p>
-        <hr>
-    <% end %>
+<%end%>
 
 7. add methods to article controllers
-        def new
+    def new
     end
 
     def create
@@ -119,3 +121,9 @@
         {
             border-color: red;
         }
+
+
+
+
+
+rails webpacker:install
