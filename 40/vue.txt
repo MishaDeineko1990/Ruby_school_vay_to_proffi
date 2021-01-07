@@ -10,6 +10,28 @@
         //redirect_to action: :new //redirect on other method is valid decision
     end
 
-3. add linc on destroy method 
+3. add linc on destroy method in vue controller "index"
     | 
         <%= link_to "Destroy", article_path(article), method: :delete, data: {confirm: 'Are you sure&'} %>
+
+4. add comments on oue aplication -- start 
+    $ rails g model Comment author:string body:text article:references
+    rake db:migrate
+
+    Check the DB file for the presence of a table "comment"
+        $ sqlite3 development.sqlite3
+        $ .tables
+        $ .mode columns
+        $ .header on
+        $ select * from articles;
+        $ pragma table_info(comments);
+
+5. add to model article
+    has_many :comments
+
+6 Change routes "articles"
+    resources :articles do
+        resources :comments
+    end
+
+1:10:46
