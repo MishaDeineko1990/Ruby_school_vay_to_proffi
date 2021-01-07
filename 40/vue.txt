@@ -1,5 +1,5 @@
 1. add static pages
-    1.1 create new controller example pages (rails g controller pages about) 
+    1.1 create new controller for staick pages (rails g controller pages about) 
 
 2. add method from destroy in controller
     def destroy
