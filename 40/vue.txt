@@ -1,0 +1,15 @@
+1. add static pages
+    1.1 create new controller example pages (rails g controller pages about) 
+
+2. add method from destroy in controller
+    def destroy
+        @article = Article.find(params[:id])
+        @article.destroy
+
+        redirect_to articles_path
+        //redirect_to action: :new //redirect on other method is valid decision
+    end
+
+3. add linc on destroy method 
+    | 
+        <%= link_to "Destroy", article_path(article), method: :delete, data: {confirm: 'Are you sure&'} %>
