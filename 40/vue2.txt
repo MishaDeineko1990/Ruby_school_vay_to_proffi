@@ -195,6 +195,11 @@ PART 2 CREATE COMMENTS TO ARTICLES
         </p>
     <% end %>
 
+
+
+
+    
+
 ================================
 
 

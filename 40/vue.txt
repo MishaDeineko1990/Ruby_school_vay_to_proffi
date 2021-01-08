@@ -74,6 +74,8 @@
         $ .header on
         $ select * from articles;
         $ pragma table_info(comments);
-
+        
+    See created essence in db acros rails console
         $ rails console
-        $ @article = Article.(3)
+        $ @article = Article.find(3)
+        $ @article.comments
