@@ -177,7 +177,7 @@
 /* carusel */
 
 .carousel-item {
-  background-image: url('https://placeimg.com/1366/480/nature');
+  background-image: url('./img/banner1.jpg');
   background-size: cover;
   background-position: center;
   height: 480px;

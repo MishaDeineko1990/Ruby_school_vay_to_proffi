@@ -1,11 +1,11 @@
 1. rails new blog
 2. rails g model Article title:string text:text
 3. rake db:migrate
-4. rails g controller articles new     // create controller
+4. rails g controller articles new create    // create controller
 5. add code in router.rb
     resources :articles
-6. add in view presintation form builder    
-    <%= form_for :article, url: "/articles" do |f|%>    
+6. add in  new view presintation form builder    
+    <%= form_for :article, url: articles_path do |f|%>    
         <p>   
             <%= f.label :title%></br>
             <%= f.text_field :title%>
