@@ -1,11 +1,10 @@
-1. rails new blog
-2. rails g model Article title:string text:text
-3. rake db:migrate
-4. rails g controller articles new create edit index show   // create controller
+1. Run several commands one after the other to build a rails application, if the previous command worked.()
+rails new blog && rails g model Article title:string text:text && rake db:migrate && rails g controller articles new edit index show 
 5. add code in router.rb
     get 'home/index'
     resources :articles
 6. add in  new view presintation form builder    
+
     <%= form_for :article, url: articles_path do |f|%>    
         <p>   
             <%= f.label :title%></br>
@@ -61,6 +60,7 @@
 <%end%>
 
 7. add methods to article controllers
+
     def new
     end
 
@@ -129,8 +129,7 @@
 
 PART 2 CREATE COMMENTS TO ARTICLES
 
-1. add static pages
-    1.1 create new controller for staick pages (rails g controller pages about) 
+
 
 2. add method from destroy in controller
     def destroy
@@ -196,6 +195,10 @@ PART 2 CREATE COMMENTS TO ARTICLES
     <% end %>
 
 ================================
+
+1. add static pages
+    1.1 create new controller for staick pages (rails g controller pages about) 
+
 
 
     Check the DB file for the presence of a table "comment"

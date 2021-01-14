@@ -8,7 +8,7 @@
 	// Example:
 	"Print to console": {
 		"scope": "erb",
-		"prefix": "rfor",
+		"prefix": "rform",
 		"body": [
 			"<%= form_for :**article**, url: **articles_path** do |f|%>",
 			"",
