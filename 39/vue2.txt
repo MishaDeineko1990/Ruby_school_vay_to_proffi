@@ -1,8 +1,12 @@
 1. Run several commands one after the other to build a rails application, if the previous command worked.()
-rails new blog && rails g model Article title:string text:text && rake db:migrate && rails g controller articles new edit index show 
+rails new blog && cd blog && rails g model Article title:string text:text && rake db:migrate && rails g controller articles new edit index show 
+
+
 5. add code in router.rb
     get 'home/index'
     resources :articles
+    
+        
 6. add in  new view presintation form builder    
 
     <%= form_for :article, url: articles_path do |f|%>    
@@ -18,6 +22,46 @@ rails new blog && rails g model Article title:string text:text && rake db:migrat
             <%= f.submit%>
         </p>
     <%end%>
+
+
+
+
+
+rails new blog && 
+cd blog && 
+rails g model Article title:string text:text && 
+rake db:migrate && 
+rails g controller articles &&
+cd config && 
+rm routes.rb &&
+echo "Rails.application.routes.draw do" >> routes.rb && echo "    get 'home/index'" >> routes.rb && echo "    resources :articles" >> routes.rb && echo "end" >> routes.rb &&
+cd .. &&
+cd app &&
+cd views &&
+cd articles &&
+echo "    <%= form_for :article, url: articles_path do |f|%>" >> new.html.erb && 
+echo "        <p>" >> new.html.erb && 
+echo "            <%= f.label :title%></br>" >> new.html.erb && 
+echo "            <%= f.text_field :title%>" >> new.html.erb && 
+echo "        </p>" >> new.html.erb && 
+echo "        <p>" >> new.html.erb && 
+echo "            <%= f.label :text %></br>" >> new.html.erb && 
+echo "            <%= f.text_area :text%>" >> new.html.erb && 
+echo "        </p>" >> new.html.erb && 
+echo "        <p>" >> new.html.erb && 
+echo "            <%= f.submit%>" >> new.html.erb && 
+echo "        </p>" >> new.html.erb && 
+echo "    <%end%>" >> new.html.erb && 
+echo "    <H1>List articles</H1>" >> index.html.erb && 
+echo " " >> index.html.erb && 
+echo "    <% @articles.each do |article|%>" >> index.html.erb && 
+echo "" >> index.html.erb && 
+echo "" >> index.html.erb && 
+echo "" >> index.html.erb && 
+echo "" >> index.html.erb && 
+echo "" >> index.html.erb && 
+echo "" >> index.html.erb && 
+echo "" >> index.html.erb && 
 
 6.2  index view
 
