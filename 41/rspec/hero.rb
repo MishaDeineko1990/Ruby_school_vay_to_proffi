@@ -22,8 +22,8 @@ class Hero
     end
 end
 
-hero = Hero.new 'mike'
-p hero.name 
-p hero.health_up
-p hero.health_down
-p hero.hero_info 
+# hero = Hero.new 'mike'
+# p hero.name 
+# p hero.health_up
+# p hero.health_down
+# p hero.hero_info 
