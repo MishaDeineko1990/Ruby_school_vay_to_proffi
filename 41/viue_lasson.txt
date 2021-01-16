@@ -1,0 +1,29 @@
+* when to use one when many
+
+db tables    -     many
+model        -     one
+controller   -     many
+
+
+
+* Create a connection between the subjects
+
+1. one to one
+order                   |   adress
+----------------------------------------------------------
+has_one :adress         |   belongs_to :order
+                        |   db has colums -> order_id 
+
+
+2. one to many
+article                 |   coments
+----------------------------------------------------------
+has_many :comments      |   belongs_to :article
+                        |   db has colums -> article_id
+
+
+1. many to many
+tag                     |                |   coments
+----------------------------------------------------------
+id                      |  tag_id              |   id
+                        |  article_id          |  
