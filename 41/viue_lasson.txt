@@ -27,3 +27,41 @@ tag                     |                |   coments
 ----------------------------------------------------------
 id                      |  tag_id              |   id
                         |  article_id          |  
+
+
+lasson_41_35:00
+https://github.com/rails/strong_parameters
+----------------------------------------------------------
+|                     active record                      |
+|        C            R          U            D          |
+|      create       read       update       delete       |
+|                                                        |
+|       new       .find(3)   upd<-{hash}    destroy      |
+|      .save        .all                                 |
+|                  .where                                |
+|     .create                                            |
+|                                                        |
+----------------------------------------------------------
+
+
+             REST
+  represntetion state transfer
+   передача состояния обекта
+
+        resource      ++++
+        resources     ++++ index
+
+    GET   POST  UPDATE   DELETE
+
+    resources do 
+        resources
+    end
+
+
+
+          RSPEK    -    Framework for testing application
+        
+describe
+it
+
+1:32
