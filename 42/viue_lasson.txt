@@ -1,0 +1,13 @@
+
+
+
+          RSPEK    -    Framework for testing application
+        
+describe
+it
+   
+  ! ----- for bring explanation read example in the files in the rspec folder
+
+  build matchers  --  https://relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+
+  00:38
