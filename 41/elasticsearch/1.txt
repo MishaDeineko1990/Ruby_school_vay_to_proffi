@@ -1,0 +1,36 @@
+1. link for install and settings elasticsearch on rusian 
+    -   https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-18-04-ru 
+    -   https://www.youtube.com/watch?v=T3-t0180VC4&list=PLdpb__6uY73kCu4eG9IolmhkBmNgyRL-i&index=4  - aboun elasticserach
+
+
+2 video on settings elasticsearch on rails --    https://www.youtube.com/watch?v=Pse-2ZkVaTs&list=PLjQo0sojbbxWcy_byqkbe7j3boVTQurf9
+    1. add gem
+        gem 'elasticsearch-rails'
+        gem 'elasticsearch-model'
+
+        $ bundle install
+
+    2. add to model
+        include Elasticsearch::Model
+        include Elasticsearch::Model::Callbacks
+
+
+
+vue index
+
+        <%= form_tag articles_path, role: 'search', method: :get do |fr|%>
+
+            <p>
+                <%= text_field_tag :q, params[:q]%> 
+            </p>
+
+            <p>
+                <%= button_tag 'Search', name: nil %> 
+            </p>
+        <%end%>
+
+        <%= render @articlee %>
+
+
+controller 
+        @articlee = Article.search((params[:q].present? ? params[:q] : '*')).records

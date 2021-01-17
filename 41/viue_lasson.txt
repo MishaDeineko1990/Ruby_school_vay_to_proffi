@@ -63,5 +63,6 @@ https://github.com/rails/strong_parameters
         
 describe
 it
-
+   
+  ! ----- for bring explanation read example in the files in the rspec folder
 1:32
