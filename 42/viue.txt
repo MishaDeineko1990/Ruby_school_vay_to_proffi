@@ -107,7 +107,7 @@
     def article_params
         params.require(:article).permit(:title, :text)
     end  
-
+end
 
 8. add module aticle validation
         validates :title, presence: true
@@ -199,6 +199,7 @@ PART 2 CREATE COMMENTS TO ARTICLES
             <%= f.submit %>
         </p>
     <% end %>
+
 
 10 add show comment to vuew "show"
     
