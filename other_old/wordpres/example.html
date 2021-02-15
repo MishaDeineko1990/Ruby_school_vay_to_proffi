@@ -1,0 +1,41 @@
+https://wp-kama.ru/
+
+
+====================================================
+LASSON 3
+====================================================
+ 
+1. add header logo from function bloginfo index.php
+   <a href="<?php bloginfo('url') ?>">       <!--  function for home link   -->
+        <div class="logo">
+            <?php bloginfo('url') ?>">        
+        </div>        
+    </a>
+
+2. register nav menu 
+    add_action("after_setup_theme", "My_Menu");
+
+    function My_Menu() {
+        register_nav_menu ('many_-_kay', 'faking_-_description')
+    }
+
+3. add to index.php for add manu in wordpress 
+
+    wp_nav_menu( [
+	'theme_location'  => 'many_-_kay',
+	'menu'            => '', 
+	'container'       => 'div',           'container'       => null, 
+	'container_class' => '', 
+	'container_id'    => '',
+	'menu_class'      => 'menu', 
+	'menu_id'         => '',
+	'echo'            => true,
+	'fallback_cb'     => 'wp_page_menu',
+	'before'          => '',
+	'after'           => '',
+	'link_before'     => '',
+	'link_after'      => '',
+	'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+	'depth'           => 0,
+	'walker'          => '',
+] );
