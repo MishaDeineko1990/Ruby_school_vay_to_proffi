@@ -11,3 +11,27 @@ it
   build matchers  --  https://relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
 
   00:38
+
+  
+  
+  
+----------------------------------------------------------
+  DEVISE
+----------------------------------------------------------
+
+gem 'devise'
+
+$ bundle
+
+$ rails g devise:install
+
+add in development.rb 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000
+
+Ensure you have flash messages in app/views/layouts/application.html.erb.
+    For example:
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+$ rails g devise User
