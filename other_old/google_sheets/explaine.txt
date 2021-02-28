@@ -1,0 +1,15 @@
+1 create google shit
+2 add share whot all yser can see document
+3 publick shit in web (file=>publick i web)
+4 add script in your documment
+    $(document).ready(function(){
+
+    $.getJSON("https://spreadsheets.google.com/feeds/list/***PUTH_YOUR_DOCUMENT***example(1CHke8cOAcvrj1sLwBnlsXpbqjxWdO99CeZIvD7XZEsk)/od6/public/values?alt=json", function(data){
+            
+            data = data['feed']['entry'];
+            console.log(data);
+            // console.log(data);
+            // chage_languige();
+            // show_menu(data);
+        })
+    });  
