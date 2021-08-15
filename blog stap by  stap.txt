@@ -1,0 +1,21 @@
+1. rails new blog
+2. rails g model Article title:string text:text
+3. rake db:migrate
+4. rails g controller articles new create edit index show   // create controller
+5. add code in router.rb
+    get 'home/index'
+    resources :articles
+
+
+
+
+Step 1 - add formbuilder to action new
+<%= form_for :article do |f| %>
+
+    <p>
+        <%= f.text_field %>
+    </p>
+
+<% end %> 
+
+<p>Find me in app/views/articles/new.html.erb</p>
